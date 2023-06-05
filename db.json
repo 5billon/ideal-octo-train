@@ -6,7 +6,9 @@
       "bathrooms": 2,
       "country": "United States",
       "state": "California",
-      "city": "Los Angeles"
+      "city": "Los Angeles",
+      "review": "",
+      "image":""
     },
     {
       "zipCode": "23456",
@@ -14,7 +16,9 @@
       "bathrooms": 3,
       "country": "United States",
       "state": "New York",
-      "city": "New York City"
+      "city": "New York City",
+      "review: "",
+      "image": ""
     },
     {
       "zipCode": "34567",
@@ -22,7 +26,9 @@
       "bathrooms": 1,
       "country": "United States",
       "state": "Texas",
-      "city": "Austin"
+      "city": "Austin",
+      "review": "",
+      "image": ""
     },
     {
       "zipCode": "45678",
@@ -30,7 +36,9 @@
       "bathrooms": 2,
       "country": "United States",
       "state": "Florida",
-      "city": "Miami"
+      "city": "Miami",
+      "review": "",
+      "image": ""
     },
     {
       "zipCode": "56789",
@@ -38,7 +46,9 @@
       "bathrooms": 3,
       "country": "United States",
       "state": "Washington",
-      "city": "Seattle"
+      "city": "Seattle",
+      "review": "",
+      "image": ""
     },
     {
       "zipCode": "67890",
@@ -46,7 +56,9 @@
       "bathrooms": 1,
       "country": "United States",
       "state": "Illinois",
-      "city": "Chicago"
+      "city": "Chicago",
+      "review": "",
+      "image": ""
     },
     {
       "zipCode": "78901",
@@ -54,7 +66,9 @@
       "bathrooms": 2,
       "country": "United States",
       "state": "Massachusetts",
-      "city": "Boston"
+      "city": "Boston",
+      "review": "",
+      "image": ""
     },
     {
       "zipCode": "89012",
@@ -62,7 +76,9 @@
       "bathrooms": 3,
       "country": "United States",
       "state": "Colorado",
-      "city": "Denver"
+      "city": "Denver",
+      "review": "",
+      "image": ""
     },
     {
       "zipCode": "90123",
@@ -70,7 +86,9 @@
       "bathrooms": 1,
       "country": "United States",
       "state": "Arizona",
-      "city": "Phoenix"
+      "city": "Phoenix",
+      "review": "",
+      "image": ""
     }
   ]
 }
