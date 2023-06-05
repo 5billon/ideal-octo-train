@@ -1,1 +1,77 @@
+{
+  "houses": [
+    {
+      "zipCode": "12345",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "country": "United States",
+      "state": "California",
+      "city": "Los Angeles"
+    },
+    {
+      "zipCode": "23456",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "country": "United States",
+      "state": "New York",
+      "city": "New York City"
+    },
+    {
+      "zipCode": "34567",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "country": "United States",
+      "state": "Texas",
+      "city": "Austin"
+    },
+    {
+      "zipCode": "45678",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "country": "United States",
+      "state": "Florida",
+      "city": "Miami"
+    },
+    {
+      "zipCode": "56789",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "country": "United States",
+      "state": "Washington",
+      "city": "Seattle"
+    },
+    {
+      "zipCode": "67890",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "country": "United States",
+      "state": "Illinois",
+      "city": "Chicago"
+    },
+    {
+      "zipCode": "78901",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "country": "United States",
+      "state": "Massachusetts",
+      "city": "Boston"
+    },
+    {
+      "zipCode": "89012",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "country": "United States",
+      "state": "Colorado",
+      "city": "Denver"
+    },
+    {
+      "zipCode": "90123",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "country": "United States",
+      "state": "Arizona",
+      "city": "Phoenix"
+    }
+  ]
+}
 
