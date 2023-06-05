@@ -8,7 +8,7 @@
       "state": "California",
       "city": "Los Angeles",
       "review": "The bed is comfortable, bathroom and terrace are excellent. Location is incredible.",
-      "image":""
+      "image":"https://media.bizj.us/view/img/12028992/thebarnlot836-1*1200xx3600-2025-0-185.jpg"
     },
     {
       "zipCode": "23456",
@@ -18,7 +18,7 @@
       "state": "New York",
       "city": "New York City",
       "review": "The location of this vacation home is perfect- literally a few feet from the beach, however, I was disappointed to find that the handicapped-accessible features like a walk-in shower and rails in the bathroom that were listed in the listing were not present in the actual cottage. The host was friendly and attempted to accommodate, but this made travel with limited mobility much more difficult than expected.",
-      "image": ""
+      "image": "https://media.istockphoto.com/id/531237259/photo/luxury-brooklyn-house-new-york.jpg?s=612x612&w=0&k=20&c=7OB7DatoVCoJ4jlDh1p6pZV0dlLEZg58A0IxaoE4vLk="
     },
     {
       "zipCode": "34567",
@@ -27,8 +27,8 @@
       "country": "United States",
       "state": "Texas",
       "city": "Austin",
-      "review": "This apartment was stylish and clean, but unfortunately, I didn’t have a 5-star stay. Several items in the kitchen were badly broken and unusable and the bathroom shower sprayed everywhere- requiring a big cleanup after every shower. Although I contacted the host several times, they never made any attempt to resolve these issues.",
-      "image": ""
+      "review": "This house was stylish and clean, but unfortunately, I didn’t have a 5-star stay. Several items in the kitchen were badly broken and unusable and the bathroom shower sprayed everywhere- requiring a big cleanup after every shower. Although I contacted the host several times, they never made any attempt to resolve these issues.",
+      "image": "https://images.ctfassets.net/5cjznp8u1b6h/j18fCMjGHCA22wM0m66PJ/ac667abe16ee362edcf2edd62bf09127/austin_homes_-_Article_Header.png"
     },
     {
       "zipCode": "45678",
@@ -38,7 +38,7 @@
       "state": "Florida",
       "city": "Miami",
       "review": "This is a lovely accommodation that is very close to the UNESCO site. The host was an exceptionally responsive host. There is some road noise, but with a white noise app on my phone, I slept fine.",
-      "image": ""
+      "image": "https://media.istockphoto.com/id/147205632/photo/modern-home-with-swimming-pool.jpg?s=612x612&w=0&k=20&c=sxRQ398SxAjC4FrRombjl46oDGJVdy23T7i3RXO-mww="
     },
     {
       "zipCode": "56789",
@@ -48,7 +48,7 @@
       "state": "Washington",
       "city": "Seattle",
       "review": "This little house had everything I needed and even a view of the water from the porch! Comfortable bed and very, very helpful hosts",
-      "image": ""
+      "image": "https://res.cloudinary.com/sagacity/image/upload/c_crop,h_682,w_1024,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/img-1-2_b5cxs9.jpg"
     },
     {
       "zipCode": "67890",
@@ -57,8 +57,8 @@
       "country": "United States",
       "state": "Illinois",
       "city": "Chicago",
-      "review": "This host has literally thought of everything a guest might need! The apartment is comfortable, clean, and very well appointed. There’s an amazing gift shop nearby where I stocked up on locally made crafts to bring back to the US as gifts.",
-      "image": ""
+      "review": "This host has literally thought of everything a guest might need! The house is comfortable, clean, and very well appointed. There’s an amazing gift shop nearby where I stocked up on locally made crafts to bring back to the US as gifts.",
+      "image": "https://cdn.homedsgn.com/wp-content/uploads/2017/12/Tiny-Mini-House-by-LineBox-Studio.jpg"
     },
     {
       "zipCode": "78901",
@@ -67,8 +67,8 @@
       "country": "United States",
       "state": "Massachusetts",
       "city": "Boston",
-      "review": "I LOVED this apartment- it was my favorite stay of 3 months in South America. This place is safe, comfortable, and well located, and the numerous small, thoughtful touches put it over the top.",
-      "image": ""
+      "review": "I LOVED this house- it was my favorite stay of 3 months from South America. This place is safe, comfortable, and well located, and the numerous small, thoughtful touches put it over the top.",
+      "image": "https://s3.us-east-2.amazonaws.com/havenlifestyles/2210009288-1.jpg"
     },
     {
       "zipCode": "89012",
@@ -78,7 +78,7 @@
       "state": "Colorado",
       "city": "Denver",
       "review": "This place is amazing- absolutely what I expected based on the photos. If you are considering this spot- book it! I did a 6-night rest here after hiking through Torres Del Paine and I am so glad I booked my time here. This unit is the farthest from the street, so it is extra quiet and extra private!",
-      "image": ""
+      "image": "https://www.martiscamp.com/wp-content/uploads/2022/07/1920-1-Martis-Camp-Home-162-Front.jpg"
     },
     {
       "zipCode": "90123",
@@ -87,8 +87,8 @@
       "country": "United States",
       "state": "Arizona",
       "city": "Phoenix",
-      "review": "A cute apartment with all the necessities and a nice patio and garden. Check-in and check-out were easy. It’s close to the port but there are LOTS of steps between the apartment and the ferry dock. If I stayed here again I’d uber between the apartment to better manage my heavy wheeled luggage.",
-      "image": ""
+      "review": "A cute house with all the necessities and a nice patio and garden. Check-in and check-out were easy. It’s close to the port but there are LOTS of steps between the home and the ferry dock. If I stayed here again I’d uber between the home and dock to better manage my heavy wheeled luggage.",
+      "image": "https://i.insider.com/5e1caa2a49878c138b7a56ca?width=700"
     }
   ]
 }
