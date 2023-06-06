@@ -20,22 +20,29 @@
     </header>
     <main>
         <div class="house">
-            <img id = "main-display" src="" alt="">
-            <ul>
-                <li id="bedrooms"></li>
-                <li id="bathrooms"></li>
-                <li id="city"></li>
-                <li id="state"></li>
-                <li id="zipcode"></li>
-            </ul>
+            <div id = "main-display-div">
+                <h2 id = "details">Choose a house below for more details!</h2>
+                <img id = "main-display" src="" alt="">
+                <ul>
+                    <li id="bedrooms"></li>
+                    <li id="bathrooms"></li>
+                    <li id="city"></li>
+                    <li id="state"></li>
+                    <li id="zipcode"></li>
+                </ul>
+            </div>
 
+            <h3>Previous Renters Thoughts!</h3>
+            <ul id="past-reviews">
+                <li>Former reviews here</li>
+            </ul>
             <form id = "reviews-form">
                 <label for="reviews"> Reviews: </label>
-                <input type="text" id = "reviews">
-                <input type="submit">
+                <textarea name="reviews" id="new-reviews"></textarea>
+                <input type="submit" value="Create">
             </form>
-
-            <label for="bedroom-select">How Many Bedrooms?</label>
+            
+           <label for="bedroom-select">How Many Bedrooms?</label>
             <select name="bedrooms" id="bedroom-select">
                 <option value="all">select all</option>
                 <option value="2">2</option>
@@ -50,7 +57,7 @@
                 <option value="2">2</option>
                 <option value="3">3</option>
             </select>
-
+            
             <div id = "house-list">
 
             </div>
