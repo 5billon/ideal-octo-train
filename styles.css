@@ -10,3 +10,7 @@ img{
     align-items: center;
     justify-content: space-evenly;
 }
+#past-reviews{
+    list-style-type: none;
+
+}
