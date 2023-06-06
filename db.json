@@ -1,6 +1,7 @@
 {
   "houses": [
     {
+      "id": 1,
       "zipCode": "12345",
       "bedrooms": 3,
       "bathrooms": 2,
@@ -11,6 +12,7 @@
       "image":"https://media.bizj.us/view/img/12028992/thebarnlot836-1*1200xx3600-2025-0-185.jpg"
     },
     {
+      "id": 2,
       "zipCode": "23456",
       "bedrooms": 4,
       "bathrooms": 3,
@@ -21,6 +23,7 @@
       "image": "https://media.istockphoto.com/id/531237259/photo/luxury-brooklyn-house-new-york.jpg?s=612x612&w=0&k=20&c=7OB7DatoVCoJ4jlDh1p6pZV0dlLEZg58A0IxaoE4vLk="
     },
     {
+      "id": 3,
       "zipCode": "34567",
       "bedrooms": 2,
       "bathrooms": 1,
@@ -31,6 +34,7 @@
       "image": "https://images.ctfassets.net/5cjznp8u1b6h/j18fCMjGHCA22wM0m66PJ/ac667abe16ee362edcf2edd62bf09127/austin_homes_-_Article_Header.png"
     },
     {
+      "id": 4,
       "zipCode": "45678",
       "bedrooms": 3,
       "bathrooms": 2,
@@ -41,6 +45,7 @@
       "image": "https://media.istockphoto.com/id/147205632/photo/modern-home-with-swimming-pool.jpg?s=612x612&w=0&k=20&c=sxRQ398SxAjC4FrRombjl46oDGJVdy23T7i3RXO-mww="
     },
     {
+      "id": 5,
       "zipCode": "56789",
       "bedrooms": 4,
       "bathrooms": 3,
@@ -51,6 +56,7 @@
       "image": "https://res.cloudinary.com/sagacity/image/upload/c_crop,h_682,w_1024,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/img-1-2_b5cxs9.jpg"
     },
     {
+      "id": 6,
       "zipCode": "67890",
       "bedrooms": 2,
       "bathrooms": 1,
@@ -61,6 +67,7 @@
       "image": "https://cdn.homedsgn.com/wp-content/uploads/2017/12/Tiny-Mini-House-by-LineBox-Studio.jpg"
     },
     {
+      "id": 7,
       "zipCode": "78901",
       "bedrooms": 3,
       "bathrooms": 2,
@@ -71,6 +78,7 @@
       "image": "https://s3.us-east-2.amazonaws.com/havenlifestyles/2210009288-1.jpg"
     },
     {
+      "id": 8,
       "zipCode": "89012",
       "bedrooms": 4,
       "bathrooms": 3,
@@ -81,6 +89,7 @@
       "image": "https://www.martiscamp.com/wp-content/uploads/2022/07/1920-1-Martis-Camp-Home-162-Front.jpg"
     },
     {
+      "id": 9,
       "zipCode": "90123",
       "bedrooms": 2,
       "bathrooms": 1,
