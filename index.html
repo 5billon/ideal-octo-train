@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flat-I-Rent</title>
     <link rel="stylesheet" href="./styles.css">
-    <script defer href="./index.js"></script>
+    <script defer src="./index.js"></script>
 </head>
 <body>
     <header id = "title">
@@ -20,14 +20,21 @@
     </header>
     <main>
         <div class="house">
-            <img id = "main-display" src="" alt="">
-            <ul>
-                <li id="bedrooms"></li>
-                <li id="bathrooms"></li>
-                <li id="city"></li>
-                <li id="state"></li>
-                <li id="zipcode"></li>
-            </ul>
+
+            <div id = "main-display-div">
+                <h2 id = "details">Choose a house below for more details!</h2>
+                <img id = "main-display" src="" alt="">
+                <ul>
+                    <li id="bedrooms"></li>
+                    <li id="bathrooms"></li>
+                    <li id="city"></li>
+                    <li id="state"></li>
+                    <li id="zipcode"></li>
+                    <li id="home-reviews"></li>
+                </ul>
+            </div>
+            
+            
 
             <form id = "reviews-form">
                 <label for="reviews"> Reviews: </label>
