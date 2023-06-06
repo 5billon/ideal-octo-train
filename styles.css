@@ -10,3 +10,14 @@ img{
     align-items: center;
     justify-content: space-evenly;
 }
+
+#house-list{
+    display: flex;
+}
+
+#house-list div{
+    width: 200px;
+    height: 200px;
+    font-size: 75%;
+    text-align: center;
+}
