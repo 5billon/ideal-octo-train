@@ -20,27 +20,30 @@
     </header>
     <main>
         <div class="house">
-            <div id = "main-display-div">
-                <h2 id = "details">Choose a house below for more details!</h2>
-                <img id = "main-display" src="" alt="">
-                <ul>
-                    <li id="bedrooms"></li>
-                    <li id="bathrooms"></li>
-                    <li id="city"></li>
-                    <li id="state"></li>
-                    <li id="zipcode"></li>
-                </ul>
+            <div id="form-container">
+                <div id = "main-display-div">
+                    <h2 id = "details">Choose a house below for more details!</h2>
+                    <img id = "main-display" src="https://i.pinimg.com/originals/5c/2b/5e/5c2b5ed23358a8448bc19c9252bc7ba7.jpg" alt="">
+                    <ul>
+                        <li id="bedrooms"></li>
+                        <li id="bathrooms"></li>
+                        <li id="city"></li>
+                        <li id="state"></li>
+                        <li id="zipcode"></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Previous Renters Thoughts!</h3>
+                    <ul id="past-reviews">
+                        <li>Former reviews here</li>
+                    </ul>
+                    <form id = "reviews-form">
+                        <label for="reviews"> Reviews: </label>
+                        <textarea name="reviews" id="new-reviews"></textarea>
+                        <input type="submit" value="Create">
+                    </form>
+                </div>
             </div>
-
-            <h3>Previous Renters Thoughts!</h3>
-            <ul id="past-reviews">
-                <li>Former reviews here</li>
-            </ul>
-            <form id = "reviews-form">
-                <label for="reviews"> Reviews: </label>
-                <textarea name="reviews" id="new-reviews"></textarea>
-                <input type="submit" value="Create">
-            </form>
             
            <label for="bedroom-select">How Many Bedrooms?</label>
             <select name="bedrooms" id="bedroom-select">
