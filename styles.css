@@ -1,10 +1,15 @@
 body{
     margin: 0;
     color: #4e4040;
+    /* background: rgb(2,0,36);
+background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(157,160,175,1) 0%, rgba(86,129,219,1) 100%); */
 }
 
 img{
     width: 100px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 2px 4px 8px rgb(68,67,67);
 }
 #title{
     display: flex;
@@ -24,9 +29,10 @@ ul{
 #main-display-div{
     width: 32rem;
     height: auto;
-    border: 1px solid black;
+    border: 1px transparent black;
     margin: auto 10rem;
     text-align: center;
+    border-radius: 10px;
     background: linear-gradient(to top, #808080 0%, #dbdbe2 10%)
 }
 #main-display{
