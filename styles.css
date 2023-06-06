@@ -16,18 +16,15 @@ img{
     align-items: center;
     justify-content: space-evenly;
 }
-
 #house-list{
     display: flex;
 }
-
 ul{
     list-style-type: none;
     padding: 2rem ;
 }
-
 #main-display-div{
-    width: 32rem;
+    width: 150rem;
     height: auto;
     border: 1px transparent black;
     margin: auto 10rem;
@@ -42,4 +39,19 @@ ul{
 }
 #details{
     padding-top: 20px;
+}
+#house-list div{
+    width: 200px;
+    height: 200px;
+    font-size: 75%;
+    text-align: center;
+}
+#past-reviews{
+    list-style-type: none;
+}
+#form-container{
+    display: flex;
+    align-items: right;
+    justify-content: space-evenly;
+    width: 65rem;
 }
