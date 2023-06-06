@@ -46,7 +46,11 @@ function handleChangeEvent(houseData =[], selectEl){  //event listener to select
         if(e.target.value === "all"){
             renderDisplayList(houseData); //shared
         }
-        else filterBy(houseData, e.target.name, e.target.value);
+        else {
+           const filteredList = filterBy(houseData, e.target.name, e.target.value);
+           clearList();
+            renderDisplayList(filteredList)
+        };
     })
 
     // bathroomSelect.addEventListener('change', (e) =>{
@@ -59,8 +63,7 @@ function handleChangeEvent(houseData =[], selectEl){  //event listener to select
 
 function filterBy (arrHouseData, option, size){ //perform filter of house data to choose items with desired size //my feature
     const filteredHomes = arrHouseData.filter(house => house[option] === parseInt(size));
-    clearList()
-    renderDisplayList(filteredHomes); //shared
+    return filteredHomes; //shared
 }
 
 function clearList(){  //clears displayed list //maybe shared
