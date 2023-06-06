@@ -11,6 +11,7 @@ function getHouseData (){ //function for fetching from db //shrared
     fetch (url)
     .then (r => r.json())
     .then (houseData =>{
+        houseData.forEach((house) => renderHomes(house))
         renderDisplayList(houseData);
         handleChangeEvent(houseData, bathroomSelect);
         handleChangeEvent(houseData, bedroomSelect);
