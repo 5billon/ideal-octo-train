@@ -38,13 +38,23 @@
                 <textarea name="reviews" id="new-reviews"></textarea>
                 <input type="submit" value="Create">
             </form>
-            <select name="bedrooms" id="dropdown-options">
+            
+           <label for="bedroom-select">How Many Bedrooms?</label> <!--used by my js functions-->
+            <select name="bedrooms" id="bedroom-select">
+                <option value="all">select all</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
-                <!-- <option value="bedrooms"></option> -->
-                
             </select>
+
+            <label for="bathroom-select">How Many Bathrooom?</label>
+            <select name="bathrooms" id="bathroom-select">
+                <option value="all">select all</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select> <!--end-->
+            
             <div id = "house-list">
 
             </div>
