@@ -6,7 +6,7 @@ const showBathrooms = document.getElementById("bathrooms");
 const showCity = document.getElementById("city");
 const showState = document.getElementById("state");
 const showZip = document.getElementById("zipcode");
-const homeReviews = document.getElementById("home-reviews");
+
 
 
 fetch('http://localhost:3000/houses')
@@ -18,7 +18,7 @@ function renderHomes(house){
             const eachHouse = document.createElement("div");
             eachHouse.addEventListener("click", function(e){
                 
-                details.innerHTML= "";
+                details.remove();
                 mainDisplay.src = e.target.currentSrc;
 
                 showBedrooms.textContent = `No. of Bedrooms: ${house.bedrooms}`;
@@ -26,7 +26,7 @@ function renderHomes(house){
                 showCity.textContent = `City: ${house.city}`;
                 showState.textContent = `State: ${house.state}`;
                 showZip.textContent = `Zip Code: ${house.zipCode}`;
-                homeReviews.textContent = `Reviews: ${house.review}`;
+                
             })
             const eachHouseImg = document.createElement("img");
             eachHouseImg.src = house.image;
