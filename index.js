@@ -1,4 +1,7 @@
-
+const url = "http://localhost:3000/houses"
+const bedroomSelect = document.getElementById("bedroom-select")
+const thumbnailList = document.getElementById('house-list')
+const bathroomSelect = document.getElementById("bathroom-select")
 const mainDisplay = document.getElementById("main-display");
 const details = document.getElementById("details");
 const showHouses = document.getElementById("house-list");
@@ -9,10 +12,21 @@ const showState = document.getElementById("state");
 const showZip = document.getElementById("zipcode");
 const reviews = document.querySelector('#past-reviews')
 
+function getHouseData (){ //function for fetching from db //shrared
+    fetch (url)
+    .then (r => r.json())
+    .then (houseData =>{
+        renderDisplayList(houseData);
+        handleChangeEvent(houseData, bathroomSelect);
+        handleChangeEvent(houseData, bedroomSelect);
+    })
+}
 
-fetch('http://localhost:3000/houses')
+getHouseData();
+
+/*fetch('http://localhost:3000/houses')
     .then(r => r.json())
-    .then(houses => houses.forEach((house) => renderHomes(house)))
+    .then(houses => houses.forEach((house) => renderHomes(house)))*/
 
 function renderHomes(house){
             const eachHouse = document.createElement("div");
@@ -50,31 +64,13 @@ function submitReview(e) {
 
 /// select option filtering the displayed thumbnails
 
-const url = "http://localhost:3000/houses"
-const bedroomSelect = document.getElementById("bedroom-select")
-const thumbnailList = document.getElementById('house-list')
-const bathroomSelect = document.getElementById("bathroom-select")
 
 ///fetch 
-
-function getHouseData (){ //function for fetching from db //shrared
-    fetch (url)
-    .then (r => r.json())
-    .then (houseData =>{
-        houseData.forEach((house) => renderHomes(house))
-        renderDisplayList(houseData);
-        handleChangeEvent(houseData, bathroomSelect);
-        handleChangeEvent(houseData, bedroomSelect);
-    })
-}
-
-getHouseData();
-
-
 function renderDisplayList(arrHouseData){ //function to render // shared
     arrHouseData.forEach(house =>{
+        renderHomes(house);
         //creates holder for img and places created img in holder
-        const card = document.createElement('div');
+        /*const card = document.createElement('div');
         const thumbImg = document.createElement('img');
         thumbImg.src=house.image;
         thumbImg.alt='house';
@@ -85,7 +81,7 @@ function renderDisplayList(arrHouseData){ //function to render // shared
         blurb.textContent = `${house.city}, ${house.state}`;
         card.append(blurb);
 
-        thumbnailList.append(card);
+        thumbnailList.append(card);*/
     })
 
 
