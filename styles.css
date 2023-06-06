@@ -1,0 +1,12 @@
+body{
+    margin: 0;
+}
+
+img{
+    width: 100px;
+}
+#title{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
