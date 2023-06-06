@@ -1,7 +1,6 @@
 body{
     margin: 0;
 }
-
 img{
     width: 100px;
 }
@@ -10,14 +9,34 @@ img{
     align-items: center;
     justify-content: space-evenly;
 }
-
 #house-list{
     display: flex;
 }
-
+ul{
+    list-style-type: none;
+    padding: 2rem ;
+}
+#main-display-div{
+    width: 32rem;
+    height: auto;
+    border: 1px solid black;
+    margin: auto 10rem;
+    text-align: center;
+    background: linear-gradient(to top, #808080 0%, #dbdbe2 10%)
+}
+#main-display{
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+}
 #house-list div{
     width: 200px;
     height: 200px;
     font-size: 75%;
     text-align: center;
+}
+#past-reviews{
+    list-style-type: none;
+
+
 }
