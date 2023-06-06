@@ -1,7 +1,6 @@
 body{
     margin: 0;
 }
-
 img{
     width: 100px;
 }
@@ -13,12 +12,10 @@ img{
 #house-list{
     display: flex;
 }
-
 ul{
     list-style-type: none;
     padding: 2rem ;
 }
-
 #main-display-div{
     width: 32rem;
     height: auto;
@@ -40,5 +37,6 @@ ul{
 }
 #past-reviews{
     list-style-type: none;
+
 
 }
