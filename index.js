@@ -25,32 +25,32 @@ getHouseData();
 
 
 function renderHomes(house){
-            const eachHouse = document.createElement("div");
-            eachHouse.classList.add("thumbnail-img");
-            eachHouse.classList.add("image-div");
-            const eachHouseImg = document.createElement("img");
-            eachHouse.addEventListener("click", function(e){
-                if(e.target.localName === "img"){
-                    details.remove();
-                    const allHouses = document.querySelectorAll(".thumbnail-img");
-                    console.log(e)
-                    clearBorderOutline(allHouses, e.target.src);
-                    eachHouseImg.classList.toggle("selected");
-                    mainDisplay.src = e.target.currentSrc;
+    const eachHouse = document.createElement("div");
+    eachHouse.classList.add("thumbnail-img");
+    eachHouse.classList.add("image-div");
+    const eachHouseImg = document.createElement("img");
+    eachHouse.addEventListener("click", function(e){
+        if(e.target.localName === "img"){
+            details.remove();
+            const allHouses = document.querySelectorAll(".thumbnail-img");
+            console.log(e)
+            clearBorderOutline(allHouses, e.target.src);
+            eachHouseImg.classList.toggle("selected");
+            mainDisplay.src = e.target.currentSrc;
     
-                    showBedrooms.textContent = `No. of Bedrooms: ${house.bedrooms}`;
-                    showBathrooms.textContent = `No. of Bathrooms: ${house.bathrooms}`;
-                    showCity.textContent = `City: ${house.city}`;
-                    showState.textContent = `State: ${house.state}`;
-                    showZip.textContent = `Zip Code: ${house.zipCode}`;
-                    reviews.textContent = house.review;
-                }
+            showBedrooms.textContent = `No. of Bedrooms: ${house.bedrooms}`;
+            showBathrooms.textContent = `No. of Bathrooms: ${house.bathrooms}`;
+            showCity.textContent = `City: ${house.city}`;
+            showState.textContent = `State: ${house.state}`;
+            showZip.textContent = `Zip Code: ${house.zipCode}`;
+            reviews.textContent = house.review;
+        }
                 
-            })
+    })
             
-            eachHouseImg.src = house.image;
-            eachHouse.appendChild(eachHouseImg);
-            showHouses.appendChild(eachHouse);
+    eachHouseImg.src = house.image;
+    eachHouse.appendChild(eachHouseImg);
+    showHouses.appendChild(eachHouse);
             
 }
 const form = document.querySelector('#reviews-form')
