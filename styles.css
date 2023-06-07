@@ -37,9 +37,9 @@ ul{
     height: 25rem;
     object-fit: cover;
 }
-#details{
-    padding-top: 20px;
-}
+/* #details{
+    
+} */
 #house-list div{
     width: 200px;
     height: 200px;
@@ -54,4 +54,9 @@ ul{
     align-items: right;
     justify-content: space-evenly;
     width: 65rem;
+}
+
+.selected{
+    border: 5px solid red;
+    border-radius: 10px;
 }

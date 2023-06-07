@@ -30,9 +30,10 @@ getHouseData();
 
 function renderHomes(house){
             const eachHouse = document.createElement("div");
+            const eachHouseImg = document.createElement("img");
             eachHouse.addEventListener("click", function(e){
-                
                 details.remove();
+                eachHouseImg.classList.toggle("selected");
                 mainDisplay.src = e.target.currentSrc;
 
                 showBedrooms.textContent = `No. of Bedrooms: ${house.bedrooms}`;
@@ -42,7 +43,7 @@ function renderHomes(house){
                 showZip.textContent = `Zip Code: ${house.zipCode}`;
                 
             })
-            const eachHouseImg = document.createElement("img");
+            
             eachHouseImg.src = house.image;
             eachHouse.appendChild(eachHouseImg);
             showHouses.appendChild(eachHouse);
@@ -116,3 +117,4 @@ function filterBy (arrHouseData, option, size){ //perform filter of house data t
 function clearList(){  //clears displayed list //maybe shared
     thumbnailList.innerHTML = '';
 }
+
