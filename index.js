@@ -12,41 +12,38 @@ const showState = document.getElementById("state");
 const showZip = document.getElementById("zipcode");
 const reviews = document.querySelector('#past-reviews')
 
-function getHouseData (){ //function for fetching from db //shrared
-    fetch (url)
-    .then (r => r.json())
-    .then (houseData =>{
-        renderDisplayList(houseData);
-        handleChangeEvent(houseData, bathroomSelect);
-        handleChangeEvent(houseData, bedroomSelect);
-    })
+function getHouseData() {
+    fetch(url)
+        .then(r => r.json())
+        .then(houseData => {
+            renderDisplayList(houseData);
+            handleSelect(houseData);
+        })
 }
 
 getHouseData();
 
-/*fetch('http://localhost:3000/houses')
-    .then(r => r.json())
-    .then(houses => houses.forEach((house) => renderHomes(house)))*/
+function renderHomes(house) {
+    const eachHouse = document.createElement("div");
+    eachHouse.classList.add('image-div');
+    const eachHouseImg = document.createElement("img");
+    eachHouse.addEventListener("click", function (e) {
+        details.remove();
+        eachHouseImg.classList.toggle('selected');
+        mainDisplay.src = e.target.currentSrc;
 
-function renderHomes(house){
-            const eachHouse = document.createElement("div");
-            eachHouse.addEventListener("click", function(e){
-                
-                details.remove();
-                mainDisplay.src = e.target.currentSrc;
+        showBedrooms.textContent = `No. of Bedrooms: ${house.bedrooms}`;
+        showBathrooms.textContent = `No. of Bathrooms: ${house.bathrooms}`;
+        showCity.textContent = `City: ${house.city}`;
+        showState.textContent = `State: ${house.state}`;
+        showZip.textContent = `Zip Code: ${house.zipCode}`;
+        reviews.textContent = house.review
+    })
 
-                showBedrooms.textContent = `No. of Bedrooms: ${house.bedrooms}`;
-                showBathrooms.textContent = `No. of Bathrooms: ${house.bathrooms}`;
-                showCity.textContent = `City: ${house.city}`;
-                showState.textContent = `State: ${house.state}`;
-                showZip.textContent = `Zip Code: ${house.zipCode}`;
-                
-            })
-            const eachHouseImg = document.createElement("img");
-            eachHouseImg.src = house.image;
-            eachHouse.appendChild(eachHouseImg);
-            showHouses.appendChild(eachHouse);
-            reviews.textContent = house.review
+    eachHouseImg.src = house.image;
+    eachHouse.appendChild(eachHouseImg);
+    showHouses.appendChild(eachHouse);
+
 }
 
 const form = document.querySelector('#reviews-form')
@@ -62,57 +59,53 @@ function submitReview(e) {
     ul.appendChild(li)
 }
 
-/// select option filtering the displayed thumbnails
-
-
-///fetch 
-function renderDisplayList(arrHouseData){ //function to render // shared
-    arrHouseData.forEach(house =>{
+function renderDisplayList(arrHouseData) {
+    arrHouseData.forEach(house => {
         renderHomes(house);
-        //creates holder for img and places created img in holder
-        /*const card = document.createElement('div');
-        const thumbImg = document.createElement('img');
-        thumbImg.src=house.image;
-        thumbImg.alt='house';
-        card.append(thumbImg);
-
-        //adds additonal info along with img to page
-        const blurb = document.createElement('p');
-        blurb.textContent = `${house.city}, ${house.state}`;
-        card.append(blurb);
-
-        thumbnailList.append(card);*/
     })
-
-
-
 }
 
-function handleChangeEvent(houseData =[], selectEl){  //event listener to select tag that handles changes // my feature
-    selectEl.addEventListener('change', (e) =>{
-        if(e.target.value === "all"){
-            renderDisplayList(houseData); //shared
+function updateDisplay(select, houseArray) {
+    if (select.value === "all") {
+        clearList();
+        renderDisplayList(houseArray);
+        return [];
+    }
+    else {
+        const filteredList = filterBy(houseArray, select.name, select.value);
+        if (filteredList.length === 0) {
+            clearList();
+            thumbnailList.textContent = "THERE ARE NO MATCHES"
         }
         else {
-           const filteredList = filterBy(houseData, e.target.name, e.target.value);
-           clearList();
-            renderDisplayList(filteredList)
-        };
+            clearList();
+            renderDisplayList(filteredList);
+        }
+
+        return filteredList;
+    };
+}
+function handleSelect(houseData = []) {
+    let filter = [];
+    bedroomSelect.addEventListener('change', (e) => {
+        filter = updateDisplay(e.target, houseData);
+    });
+
+    bathroomSelect.addEventListener('change', (e) => {
+        if (filter.length !== 0) {
+            updateDisplay(e.target, filter);
+        }
+        else {
+            updateDisplay(e.target, houseData)
+        }
     })
-
-    // bathroomSelect.addEventListener('change', (e) =>{
-    //     if(e.target.value === "all"){
-    //         renderDisplayList(houseData); //shared
-    //     }
-    //     else filterBy(houseData, e.target.name, e.target.value);
-    // })    
 }
 
-function filterBy (arrHouseData, option, size){ //perform filter of house data to choose items with desired size //my feature
+function filterBy(arrHouseData, option, size) {
     const filteredHomes = arrHouseData.filter(house => house[option] === parseInt(size));
-    return filteredHomes; //shared
+    return filteredHomes;
 }
 
-function clearList(){  //clears displayed list //maybe shared
+function clearList() {
     thumbnailList.innerHTML = '';
 }
