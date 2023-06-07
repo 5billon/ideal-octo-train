@@ -12,7 +12,7 @@ const showState = document.getElementById("state");
 const showZip = document.getElementById("zipcode");
 const reviews = document.querySelector('#past-reviews')
 
-function getHouseData (){ //function for fetching from db //shrared
+function getHouseData (){ 
     fetch (url)
     .then (r => r.json())
     .then (houseData =>{
@@ -21,12 +21,7 @@ function getHouseData (){ //function for fetching from db //shrared
         handleChangeEvent(houseData, bedroomSelect);
     })
 }
-
 getHouseData();
-
-/*fetch('http://localhost:3000/houses')
-    .then(r => r.json())
-    .then(houses => houses.forEach((house) => renderHomes(house)))*/
 
 function renderHomes(house){
             const eachHouse = document.createElement("div");
@@ -48,7 +43,6 @@ function renderHomes(house){
             showHouses.appendChild(eachHouse);
             reviews.textContent = house.review
 }
-
 const form = document.querySelector('#reviews-form')
 form.addEventListener('submit', (e) => submitReview(e))
 
@@ -61,11 +55,6 @@ function submitReview(e) {
     li.appendChild(document.createTextNode(newReview))
     ul.appendChild(li)
 }
-
-/// select option filtering the displayed thumbnails
-
-
-///fetch 
 function renderDisplayList(arrHouseData){ //function to render // shared
     arrHouseData.forEach(house =>{
         renderHomes(house);
@@ -83,15 +72,11 @@ function renderDisplayList(arrHouseData){ //function to render // shared
 
         thumbnailList.append(card);*/
     })
-
-
-
 }
-
-function handleChangeEvent(houseData =[], selectEl){  //event listener to select tag that handles changes // my feature
+function handleChangeEvent(houseData =[], selectEl){
     selectEl.addEventListener('change', (e) =>{
         if(e.target.value === "all"){
-            renderDisplayList(houseData); //shared
+            renderDisplayList(houseData);
         }
         else {
            const filteredList = filterBy(houseData, e.target.name, e.target.value);
@@ -99,20 +84,12 @@ function handleChangeEvent(houseData =[], selectEl){  //event listener to select
             renderDisplayList(filteredList)
         };
     })
-
-    // bathroomSelect.addEventListener('change', (e) =>{
-    //     if(e.target.value === "all"){
-    //         renderDisplayList(houseData); //shared
-    //     }
-    //     else filterBy(houseData, e.target.name, e.target.value);
-    // })    
+  
 }
-
-function filterBy (arrHouseData, option, size){ //perform filter of house data to choose items with desired size //my feature
+function filterBy (arrHouseData, option, size){
     const filteredHomes = arrHouseData.filter(house => house[option] === parseInt(size));
-    return filteredHomes; //shared
+    return filteredHomes;
 }
-
-function clearList(){  //clears displayed list //maybe shared
+function clearList(){
     thumbnailList.innerHTML = '';
 }

@@ -48,10 +48,23 @@ ul{
 }
 #past-reviews{
     list-style-type: none;
+    background: linear-gradient(to top, #808080 0%, #dbdbe2 10%);
+
+}
+#past-reviews li{
+    list-style-type: none;
+    padding: 10px;
+    padding-left: 0px;
+    background: linear-gradient(to top, #808080 0%,);
+    border: rgb(159, 159, 163) .5px solid;
+    
 }
 #form-container{
     display: flex;
     align-items: right;
     justify-content: space-evenly;
     width: 65rem;
+}
+#all-things-form{
+    align-items: right;
 }
