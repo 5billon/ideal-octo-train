@@ -17,6 +17,7 @@ img{
     /* padding-bottom: 2rem; */
     display: flex;
     align-items: center;
+
     justify-content: center;
     background-color: #D8C4B6;
 
@@ -24,6 +25,7 @@ img{
 h1{
     font-size: 3rem;
     
+
 }
 
 #house-list{
