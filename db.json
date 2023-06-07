@@ -98,6 +98,39 @@
       "city": "Phoenix",
       "review": "A cute house with all the necessities and a nice patio and garden. Check-in and check-out were easy. It’s close to the port but there are LOTS of steps between the home and the ferry dock. If I stayed here again I’d uber between the home and dock to better manage my heavy wheeled luggage.",
       "image": "https://i.insider.com/5e1caa2a49878c138b7a56ca?width=700"
+    },
+    {
+      "id": 10,
+      "zipCode": "41901",
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "country": "United States",
+      "state": "Michigan",
+      "city": "Ann Arbor",
+      "review":"A cute house with all the necessities and a nice patio and garden. Check-in and check-out were easy. It’s close to the port but there are LOTS of steps between the home and the ferry dock. If I stayed here again I’d uber between the home and dock to better manage my heavy wheeled luggage.",
+      "image": "https://cdn.homedsgn.com/wp-content/uploads/2017/12/Tiny-Mini-House-by-LineBox-Studio.jpg"
+    },
+    {
+      "id": 11,
+      "zipCode": "91435",
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "country": "United States",
+      "state": "North Carolina",
+      "city": "Charlotte",
+      "review": "n/a",
+      "image": "https://media.istockphoto.com/id/531237259/photo/luxury-brooklyn-house-new-york.jpg?s=612x612&w=0&k=20&c=7OB7DatoVCoJ4jlDh1p6pZV0dlLEZg58A0IxaoE4vLk="
+    },
+    {
+      "id": 12,
+      "zipCode": "33888",
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "country": "United States",
+      "state": "Washington",
+      "city": "Seattle",
+      "review": "n/a",
+      "image": "https://media.istockphoto.com/id/147205632/photo/modern-home-with-swimming-pool.jpg?s=612x612&w=0&k=20&c=sxRQ398SxAjC4FrRombjl46oDGJVdy23T7i3RXO-mww="
     }
   ]
 }
