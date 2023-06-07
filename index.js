@@ -91,6 +91,7 @@ function updateDisplay(select, houseArray) {
         if (filteredList.length === 0) {
             clearList();
             thumbnailList.textContent = "THERE ARE NO MATCHES"
+             bathroomSelect.selectedIndex = 0;
         }
         else {
             clearList();
