@@ -68,16 +68,19 @@ ul{
     list-style-type: none;
     background: linear-gradient(to top, #808080 0%, #dbdbe2 10%);
     border-radius: 10px;
-    box-shadow: 2px 4px 8px rgb(68,67,67);
+    /* box-shadow: 2px 4px 8px rgb(68,67,67); */
 
 }
 #past-reviews li{
     list-style-type: none;
     padding: 10px;
     padding-left: 4px;
+
+    margin-bottom: 5px;
     background: white;
-    border: rgb(159, 159, 163) .5px solid;
-    box-shadow: 2px 4px 8px rgb(68,67,67);
+    border: rgb(159, 159, 163) .1px solid;
+    box-shadow: 1px 2px 4px rgb(118, 117, 117);
+
     border-radius: 10px;
     margin-bottom: 5px;
     
