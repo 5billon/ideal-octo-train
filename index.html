@@ -22,8 +22,9 @@
         <div class="house">
             <div id="form-container">
                 <div id = "main-display-div">
-                    <h2 id = "details">Choose a house below for more details!</h2>
+                    
                     <img id = "main-display" src="https://i.pinimg.com/originals/5c/2b/5e/5c2b5ed23358a8448bc19c9252bc7ba7.jpg" alt="">
+                    <h2 id = "details">Choose a house below for more details!</h2>
                     <ul>
                         <li id="bedrooms"></li>
                         <li id="bathrooms"></li>
@@ -32,35 +33,43 @@
                         <li id="zipcode"></li>
                     </ul>
                 </div>
-                <div>
+                <div id ="all-things-form">
                     <h3>Previous Renters Thoughts!</h3>
                     <ul id="past-reviews">
-                        <li>Former reviews here</li>
+                        <!-- <li>Former reviews here! </li> -->
                     </ul>
                     <form id = "reviews-form">
                         <label for="reviews"> Reviews: </label>
                         <textarea name="reviews" id="new-reviews"></textarea>
-                        <input type="submit" value="Create">
+                        <div id="submit">
+
+                            <input type="submit" value="Create">
+                        </div>
                     </form>
                 </div>
             </div>
+            <div id = "filter-options">
+                <label for="bedroom-select">How Many Bedrooms?</label>
+                <select name="bedrooms" id="bedroom-select">
+                    <option value="all">select all</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+    
+                <label for="bathroom-select">How Many Bathrooom?</label>
+                <select name="bathrooms" id="bathroom-select">
+                    <option value="all">select all</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                
+            </div>
             
-           <label for="bedroom-select">How Many Bedrooms?</label>
-            <select name="bedrooms" id="bedroom-select">
-                <option value="all">select all</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-            </select>
+           
 
-            <label for="bathroom-select">How Many Bathrooom?</label>
-            <select name="bathrooms" id="bathroom-select">
-                <option value="all">select all</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-            </select>
-            
+
             <div id = "house-list">
 
             </div>
@@ -69,7 +78,12 @@
         
     </main>
     <footer>
-
+        <a href="./index.html">About Us</a>
+        <a href="./index.html">Affiliates</a>
+        <a href="./index.html">Careers</a>
+        <a href="./index.html">Privacy Policy</a>
+        <a href="./index.html">Terms of Service</a>
+        <h4>Copyright ©️ 2023 Team Flat-I-Rent</h4>
     </footer>
 </body>
 </html>
