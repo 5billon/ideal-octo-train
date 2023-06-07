@@ -1,21 +1,33 @@
 body{
     margin: 0;
     color: #4e4040;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     /* background: rgb(2,0,36);
 background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(157,160,175,1) 0%, rgba(86,129,219,1) 100%); */
 }
 
 img{
-    width: 100px;
-    border-radius: 10px;
+    width: 6.25rem;
+    border-radius: .625rem;
+    height: 5rem;
     /* border-top-right-radius: 10px; */
     box-shadow: 2px 4px 8px rgb(68,67,67);
 }
 #title{
+    /* padding-bottom: 2rem; */
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+
+    justify-content: center;
+    background-color: #D8C4B6;
+
 }
+h1{
+    font-size: 3rem;
+    
+
+}
+
 #house-list{
     display: flex;
 }
@@ -24,21 +36,24 @@ ul{
     padding: 2rem ;
 }
 #main-display-div{
-    width: 150rem;
+    width: 70rem;
     height: auto;
     border: 1px transparent black;
-    margin: auto 10rem;
+    margin: 2rem 10rem;
     text-align: center;
     border-radius: 10px;
     background: linear-gradient(to top, #808080 0%, #dbdbe2 10%)
+}
+#all-things-form{
+    width: 50rem;
 }
 #main-display{
     width: 100%;
     height: 25rem;
     object-fit: cover;
 }
-#details{
-    padding-top: 20px;
+#logo{
+    margin-right: 20px;
 }
 #house-list div{
     width: 200px;
@@ -46,9 +61,14 @@ ul{
     font-size: 75%;
     text-align: center;
 }
+#submit{
+    text-align: center;
+}
 #past-reviews{
     list-style-type: none;
     background: linear-gradient(to top, #808080 0%, #dbdbe2 10%);
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px rgb(68,67,67);
 
 }
 #past-reviews li{
@@ -57,14 +77,68 @@ ul{
     padding-left: 0px;
     background: linear-gradient(to top, #808080 0%,);
     border: rgb(159, 159, 163) .5px solid;
+    box-shadow: 2px 4px 8px rgb(68,67,67);
+    border-radius: 10px;
+    
     
 }
 #form-container{
     display: flex;
-    align-items: right;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: space-between;
     width: 65rem;
+    margin: auto;
+    padding-bottom: 3rem;
 }
-#all-things-form{
-    align-items: right;
+
+.selected{
+    border: 3px solid rgb(153, 135, 135);
+    border-radius: 10px;
+    
+}
+.thumbnail-img:hover{
+    opacity: 0.7;
+}
+
+.house{
+    margin: auto;
+}
+
+#all-things-form h3{
+    text-align: center;
+}
+#house{
+    margin: auto;
+}
+#house-list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* width: 1000px; */
+}
+main{
+    background-color: #F5EFE7;
+}
+footer{
+    padding: 2rem;
+    color: aliceblue;
+    text-align: center;
+    background-color: #88807a;
+}
+.image-div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#filter-options{
+    width: 40rem;
+    margin-left: 2rem;
+}
+a{
+    text-decoration: none;
+    color: antiquewhite;
+    margin: 1rem;
+}
+a:hover{
+    color: rgb(223, 144, 64);
 }

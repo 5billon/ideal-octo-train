@@ -12,36 +12,46 @@ const showState = document.getElementById("state");
 const showZip = document.getElementById("zipcode");
 const reviews = document.querySelector('#past-reviews')
 
-function getHouseData (){ 
-    fetch (url)
-    .then (r => r.json())
-    .then (houseData =>{
-        renderDisplayList(houseData);
-        handleChangeEvent(houseData, bathroomSelect);
-        handleChangeEvent(houseData, bedroomSelect);
-    })
+
+function getHouseData() {
+    fetch(url)
+        .then(r => r.json())
+        .then(houseData => {
+            renderDisplayList(houseData);
+            handleSelect(houseData);
+        })
 }
 getHouseData();
 
+
 function renderHomes(house){
             const eachHouse = document.createElement("div");
+            eachHouse.classList.add("thumbnail-img");
+            eachHouse.classList.add("image-div");
+            const eachHouseImg = document.createElement("img");
             eachHouse.addEventListener("click", function(e){
-                
-                details.remove();
-                mainDisplay.src = e.target.currentSrc;
-
-                showBedrooms.textContent = `No. of Bedrooms: ${house.bedrooms}`;
-                showBathrooms.textContent = `No. of Bathrooms: ${house.bathrooms}`;
-                showCity.textContent = `City: ${house.city}`;
-                showState.textContent = `State: ${house.state}`;
-                showZip.textContent = `Zip Code: ${house.zipCode}`;
-                reviews.textContent = house.review
+                if(e.target.localName === "img"){
+                    details.remove();
+                    const allHouses = document.querySelectorAll(".thumbnail-img");
+                    console.log(e)
+                    clearBorderOutline(allHouses, e.target.src);
+                    eachHouseImg.classList.toggle("selected");
+                    mainDisplay.src = e.target.currentSrc;
+    
+                    showBedrooms.textContent = `No. of Bedrooms: ${house.bedrooms}`;
+                    showBathrooms.textContent = `No. of Bathrooms: ${house.bathrooms}`;
+                    showCity.textContent = `City: ${house.city}`;
+                    showState.textContent = `State: ${house.state}`;
+                    showZip.textContent = `Zip Code: ${house.zipCode}`;
+                    reviews.textContent = house.review;
+                }
                 
             })
-            const eachHouseImg = document.createElement("img");
+            
             eachHouseImg.src = house.image;
             eachHouse.appendChild(eachHouseImg);
             showHouses.appendChild(eachHouse);
+            
 }
 const form = document.querySelector('#reviews-form')
 form.addEventListener('submit', (e) => submitReview(e))
@@ -55,28 +65,67 @@ function submitReview(e) {
     li.appendChild(document.createTextNode(newReview))
     ul.appendChild(li)
 }
-function renderDisplayList(arrHouseData){
-    arrHouseData.forEach(house =>{
+
+function renderDisplayList(arrHouseData) {
+    arrHouseData.forEach(house => {
+
         renderHomes(house);
     })
+
 }
-function handleChangeEvent(houseData =[], selectEl){
-    selectEl.addEventListener('change', (e) =>{
-        if(e.target.value === "all"){
-            renderDisplayList(houseData);
+
+function updateDisplay(select, houseArray) {
+    if (select.value === "all") {
+        clearList();
+        renderDisplayList(houseArray);
+        return [];
+    }
+    else {
+        const filteredList = filterBy(houseArray, select.name, select.value);
+        if (filteredList.length === 0) {
+            clearList();
+            thumbnailList.textContent = "THERE ARE NO MATCHES"
         }
         else {
-           const filteredList = filterBy(houseData, e.target.name, e.target.value);
-           clearList();
-            renderDisplayList(filteredList)
-        };
-    })
-  
+            clearList();
+            renderDisplayList(filteredList);
+        }
+
+        return filteredList;
+    };
 }
-function filterBy (arrHouseData, option, size){
+function handleSelect(houseData = []) {
+    let filter = [];
+    bedroomSelect.addEventListener('change', (e) => {
+        filter = updateDisplay(e.target, houseData);
+    });
+
+    bathroomSelect.addEventListener('change', (e) => {
+        if (filter.length !== 0) {
+            updateDisplay(e.target, filter);
+
+        }
+        else {
+            updateDisplay(e.target, houseData)
+        }
+    })
+
+}
+
+function filterBy(arrHouseData, option, size) {
     const filteredHomes = arrHouseData.filter(house => house[option] === parseInt(size));
     return filteredHomes;
 }
-function clearList(){
+
+function clearList() {
+
     thumbnailList.innerHTML = '';
 }
+function clearBorderOutline(houses, currentHouse){
+    houses.forEach(house=>{
+        if(currentHouse !== house.children[0].src){
+            house.children[0].classList = "";
+        }
+    });
+}
+
