@@ -24,39 +24,39 @@ function getHouseData() {
 getHouseData();
 
 
-function renderHomes(house){
-            const eachHouse = document.createElement("div");
-            eachHouse.classList.add("thumbnail-img");
-            eachHouse.classList.add("image-div");
-            const ul = document.getElementById("past-reviews");
-            const eachHouseImg = document.createElement("img");
-            eachHouse.addEventListener("click", function(e){
-                if(e.target.localName === "img"){
-                    details.remove();
-                    const allHouses = document.querySelectorAll(".thumbnail-img");
-                    console.log(e)
-                    clearBorderOutline(allHouses, e.target.src);
-                    eachHouseImg.classList.toggle("selected");
-                    mainDisplay.src = e.target.currentSrc;
-                    const li = document.createElement("li");
-                    li.textContent = house.review;
-                    ul.innerHTML = "";
-                    ul.appendChild(li);
-    
-                    showBedrooms.textContent = `No. of Bedrooms: ${house.bedrooms}`;
-                    showBathrooms.textContent = `No. of Bathrooms: ${house.bathrooms}`;
-                    showCity.textContent = `City: ${house.city}`;
-                    showState.textContent = `State: ${house.state}`;
-                    showZip.textContent = `Zip Code: ${house.zipCode}`;
-                    // reviews.textContent = house.review;
-                }
-                
-            })
-            
-            eachHouseImg.src = house.image;
-            eachHouse.appendChild(eachHouseImg);
-            showHouses.appendChild(eachHouse);
-            
+function renderHomes(house) {
+    const eachHouse = document.createElement("div");
+    eachHouse.classList.add("thumbnail-img");
+    eachHouse.classList.add("image-div");
+    const ul = document.getElementById("past-reviews");
+    const eachHouseImg = document.createElement("img");
+    eachHouse.addEventListener("click", function (e) {
+        if (e.target.localName === "img") {
+            details.remove();
+            const allHouses = document.querySelectorAll(".thumbnail-img");
+            console.log(e)
+            clearBorderOutline(allHouses, e.target.src);
+            eachHouseImg.classList.toggle("selected");
+            mainDisplay.src = e.target.currentSrc;
+            const li = document.createElement("li");
+            li.textContent = house.review;
+            ul.innerHTML = "";
+            ul.appendChild(li);
+
+            showBedrooms.textContent = `No. of Bedrooms: ${house.bedrooms}`;
+            showBathrooms.textContent = `No. of Bathrooms: ${house.bathrooms}`;
+            showCity.textContent = `City: ${house.city}`;
+            showState.textContent = `State: ${house.state}`;
+            showZip.textContent = `Zip Code: ${house.zipCode}`;
+
+        }
+
+    })
+
+    eachHouseImg.src = house.image;
+    eachHouse.appendChild(eachHouseImg);
+    showHouses.appendChild(eachHouse);
+
 }
 const form = document.querySelector('#reviews-form')
 form.addEventListener('submit', (e) => submitReview(e))
@@ -65,11 +65,13 @@ function submitReview(e) {
     e.preventDefault()
 
     let newReview = e.target['new-reviews'].value
-    let ul = document.getElementById('past-reviews')
-    let li = document.createElement('li')
-    // li.appendChild(document.createTextNode(newReview));
-    li.textContent = newReview;
-    ul.appendChild(li);
+    if (newReview !== '') {
+        let ul = document.getElementById('past-reviews')
+        let li = document.createElement('li')
+        li.textContent = newReview;
+        ul.appendChild(li);
+        document.getElementById('reviews-form').reset()
+    }
 }
 
 function renderDisplayList(arrHouseData) {
@@ -91,7 +93,7 @@ function updateDisplay(select, houseArray) {
         if (filteredList.length === 0) {
             clearList();
             thumbnailList.textContent = "THERE ARE NO MATCHES"
-             bathroomSelect.selectedIndex = 0;
+            bathroomSelect.selectedIndex = 0;
         }
         else {
             clearList();
@@ -128,9 +130,9 @@ function clearList() {
 
     thumbnailList.innerHTML = '';
 }
-function clearBorderOutline(houses, currentHouse){
-    houses.forEach(house=>{
-        if(currentHouse !== house.children[0].src){
+function clearBorderOutline(houses, currentHouse) {
+    houses.forEach(house => {
+        if (currentHouse !== house.children[0].src) {
             house.children[0].classList = "";
         }
     });
