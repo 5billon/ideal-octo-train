@@ -35,13 +35,13 @@ function renderHomes(house){
                 showCity.textContent = `City: ${house.city}`;
                 showState.textContent = `State: ${house.state}`;
                 showZip.textContent = `Zip Code: ${house.zipCode}`;
+                reviews.textContent = house.review
                 
             })
             const eachHouseImg = document.createElement("img");
             eachHouseImg.src = house.image;
             eachHouse.appendChild(eachHouseImg);
             showHouses.appendChild(eachHouse);
-            reviews.textContent = house.review
 }
 const form = document.querySelector('#reviews-form')
 form.addEventListener('submit', (e) => submitReview(e))
@@ -55,22 +55,9 @@ function submitReview(e) {
     li.appendChild(document.createTextNode(newReview))
     ul.appendChild(li)
 }
-function renderDisplayList(arrHouseData){ //function to render // shared
+function renderDisplayList(arrHouseData){
     arrHouseData.forEach(house =>{
         renderHomes(house);
-        //creates holder for img and places created img in holder
-        /*const card = document.createElement('div');
-        const thumbImg = document.createElement('img');
-        thumbImg.src=house.image;
-        thumbImg.alt='house';
-        card.append(thumbImg);
-
-        //adds additonal info along with img to page
-        const blurb = document.createElement('p');
-        blurb.textContent = `${house.city}, ${house.state}`;
-        card.append(blurb);
-
-        thumbnailList.append(card);*/
     })
 }
 function handleChangeEvent(houseData =[], selectEl){
