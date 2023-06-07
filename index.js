@@ -28,6 +28,7 @@ function renderHomes(house){
             const eachHouse = document.createElement("div");
             eachHouse.classList.add("thumbnail-img");
             eachHouse.classList.add("image-div");
+            const ul = document.getElementById("past-reviews");
             const eachHouseImg = document.createElement("img");
             eachHouse.addEventListener("click", function(e){
                 if(e.target.localName === "img"){
@@ -37,13 +38,17 @@ function renderHomes(house){
                     clearBorderOutline(allHouses, e.target.src);
                     eachHouseImg.classList.toggle("selected");
                     mainDisplay.src = e.target.currentSrc;
+                    const li = document.createElement("li");
+                    li.textContent = house.review;
+                    ul.innerHTML = "";
+                    ul.appendChild(li);
     
                     showBedrooms.textContent = `No. of Bedrooms: ${house.bedrooms}`;
                     showBathrooms.textContent = `No. of Bathrooms: ${house.bathrooms}`;
                     showCity.textContent = `City: ${house.city}`;
                     showState.textContent = `State: ${house.state}`;
                     showZip.textContent = `Zip Code: ${house.zipCode}`;
-                    reviews.textContent = house.review;
+                    // reviews.textContent = house.review;
                 }
                 
             })
@@ -62,8 +67,9 @@ function submitReview(e) {
     let newReview = e.target['new-reviews'].value
     let ul = document.getElementById('past-reviews')
     let li = document.createElement('li')
-    li.appendChild(document.createTextNode(newReview))
-    ul.appendChild(li)
+    // li.appendChild(document.createTextNode(newReview));
+    li.textContent = newReview;
+    ul.appendChild(li);
 }
 
 function renderDisplayList(arrHouseData) {
