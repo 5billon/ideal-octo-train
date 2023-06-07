@@ -25,24 +25,32 @@ getHouseData();
 
 function renderHomes(house){
             const eachHouse = document.createElement("div");
+            eachHouse.classList.add("thumbnail-img");
+            eachHouse.classList.add("image-div");
             const eachHouseImg = document.createElement("img");
             eachHouse.addEventListener("click", function(e){
-                details.remove();
-                eachHouseImg.classList.toggle("selected");
-                mainDisplay.src = e.target.currentSrc;
-
-                showBedrooms.textContent = `No. of Bedrooms: ${house.bedrooms}`;
-                showBathrooms.textContent = `No. of Bathrooms: ${house.bathrooms}`;
-                showCity.textContent = `City: ${house.city}`;
-                showState.textContent = `State: ${house.state}`;
-                showZip.textContent = `Zip Code: ${house.zipCode}`;
+                if(e.target.localName === "img"){
+                    details.remove();
+                    const allHouses = document.querySelectorAll(".thumbnail-img");
+                    console.log(e)
+                    clearBorderOutline(allHouses, e.target.src);
+                    eachHouseImg.classList.toggle("selected");
+                    mainDisplay.src = e.target.currentSrc;
+    
+                    showBedrooms.textContent = `No. of Bedrooms: ${house.bedrooms}`;
+                    showBathrooms.textContent = `No. of Bathrooms: ${house.bathrooms}`;
+                    showCity.textContent = `City: ${house.city}`;
+                    showState.textContent = `State: ${house.state}`;
+                    showZip.textContent = `Zip Code: ${house.zipCode}`;
+                    reviews.textContent = house.review;
+                }
                 
             })
             
             eachHouseImg.src = house.image;
             eachHouse.appendChild(eachHouseImg);
             showHouses.appendChild(eachHouse);
-            reviews.textContent = house.review
+            
 }
 const form = document.querySelector('#reviews-form')
 form.addEventListener('submit', (e) => submitReview(e))
@@ -93,5 +101,12 @@ function filterBy (arrHouseData, option, size){
 }
 function clearList(){
     thumbnailList.innerHTML = '';
+}
+function clearBorderOutline(houses, currentHouse){
+    houses.forEach(house=>{
+        if(currentHouse !== house.children[0].src){
+            house.children[0].classList = "";
+        }
+    });
 }
 
