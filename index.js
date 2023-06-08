@@ -80,13 +80,13 @@ function submitReview(e) {
     e.preventDefault()
 
     let newReview = e.target['new-reviews'].value
-    if (newReview !== '') {
-        let ul = document.getElementById('past-reviews')
+    if (newReview !== '' && reviews.innerText !== '') {
         let li = document.createElement('li')
         li.textContent = newReview;
-        ul.appendChild(li);
+        reviews.appendChild(li);
         document.getElementById('reviews-form').reset()
     }
+    document.getElementById('reviews-form').reset()
 }
 
 function handleSelect(houseData = []) {
