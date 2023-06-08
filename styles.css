@@ -13,6 +13,14 @@ img{
     /* border-top-right-radius: 10px; */
     box-shadow: 2px 4px 8px rgb(68,67,67);
 }
+.thumbnail-img img{
+    width: 10rem;
+    border-radius: .625rem;
+    height: 10rem;
+    object-fit: cover;
+    /* border-top-right-radius: 10px; */
+    box-shadow: 2px 4px 8px rgb(68,67,67);
+}
 #title{
     /* padding-bottom: 2rem; */
     display: flex;
@@ -28,9 +36,7 @@ h1{
 
 }
 
-#house-list{
-    display: flex;
-}
+
 ul{
     list-style-type: none;
     padding: 2rem ;
@@ -55,12 +61,7 @@ ul{
 #logo{
     margin-right: 20px;
 }
-#house-list div{
-    width: 200px;
-    height: 200px;
-    font-size: 75%;
-    text-align: center;
-}
+
 #submit{
     text-align: center;
 }
@@ -102,6 +103,8 @@ ul{
 }
 .thumbnail-img:hover{
     opacity: 0.7;
+    transform: scale(1.2, 1.2);
+    transition: all 2s;
 }
 
 .house{
@@ -116,15 +119,26 @@ ul{
 }
 #house-list{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 20px
     /* width: 1000px; */
+}
+
+#house-list div{
+    width: 16rem;
+    height: 10rem;
+    font-size: 75%;
+    text-align: center;
 }
 main{
     background-color: #F5EFE7;
+    padding-bottom: 2rem;
 }
 footer{
     padding: 2rem;
+    padding-top: 3rem;
     color: aliceblue;
     text-align: center;
     background-color: #88807a;
@@ -136,7 +150,8 @@ footer{
 }
 #filter-options{
     width: 40rem;
-    margin-left: 2rem;
+    margin-left: 8rem;
+    margin-bottom: 2rem;
 }
 a{
     text-decoration: none;
