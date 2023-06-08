@@ -61,7 +61,6 @@ function renderHouseToMain(house) {
     showCity.textContent = `City: ${house.city}`;
     showState.textContent = `State: ${house.state}`;
     showZip.textContent = `Zip Code: ${house.zipCode}`;
-    //mainDisplay.src = e.target.currentSrc;
     mainDisplay.src = house.image;
 }
 
