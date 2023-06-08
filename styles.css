@@ -84,11 +84,18 @@ ul{
     margin-bottom: 5px;
     
 }
+#btn{
+    background-color: #7f7a7a;
+    color:rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 1px 2px 4px rgb(118, 117, 117);
+}
 #form-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 65rem;
+    /* width: 65rem; */
+    width: 75%;
     margin: auto;
     padding-bottom: 3rem;
 }
@@ -157,4 +164,28 @@ a{
 }
 a:hover{
     color: rgb(223, 144, 64);
+}
+#new-reviews{
+    border: .5px solid rgb(146, 146, 146);
+    border-radius: 5px;
+    box-shadow: 1px 2px 4px rgb(118, 117, 117);
+}
+#submit{
+    display: inline-block;
+}
+
+@media(max-width: 1099px){
+    #form-container{
+        flex-wrap: wrap;
+    }
+    #all-things-form{
+        width:50%;
+        margin: auto;
+    }
+    #main-display-div{
+        height: 50%;
+        width: auto;
+        padding: 30px;
+    }
+    
 }
